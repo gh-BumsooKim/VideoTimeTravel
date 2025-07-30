@@ -1,1 +1,581 @@
-init
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="description" content="VideoTimeTravel Page">
+  <meta property="og:title" content="VideoTimeTravel"/>
+  <meta property="og:description" content="VideoTimeTravel Page"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VideoTimeTravel</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+ 
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">
+              <img src="static/images/icon.png" width="70">
+              <span class="gradient-color-text">VideoTimeTravel</span>
+               : High-Fidelity Video Face<br>Re-Aging on Diverse Conditions
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Anonymous Author(s)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container">
+    <div class="hero-body">
+      <!-- Your video here -->
+       <img src="static/images/fig_graphical_abstract.png">
+        <h2 class="subtitle has-text-centered">
+          <b>VideoTimeTravel</b> is first diffusion-based video re-aging neural net for production-level AI model.
+        </h2>
+
+        
+    </div>
+  </div>
+</section>
+ 
+<section class="section hero is-light">
+  <div class="container is">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Machine learning-based face re-aging enables to automatically change age-related attributes given a target age, starkly reducing the need of manual labor among experienced artists. Variants of StyleGAN or diffusion models exhibited promising outcomes, but such approaches often lead to low fidelity on in-the-wild samples or still remain on image space. Thus, those video-level technics has lagged behind, despite video inference is imperative for practical aspects. To this end, we introduce diffusion-based re-aging models, marking the first attempt to incorporate diffusion scheme on video face re-aging task. Our optimization-based denoising approach can generate faithful re-aging results on various conditions, surpassing the shortcoming of GAN and VAE. Concretely, to improve global semantic coherence, joint null-text optimization is proposed where a single embedding is learned to coverage entire scene using keyframes. In addition, we leverage delta map which significantly amplifies image fidelity via residual manner. Thanks to the nature of delta, our system can lift the 2D diffusion models to video editing by neglecting age-irrelavant region and by propagating age-relavant pixels to adjacent frames through estimated optical flow without costly computing power. Our <b>VideoTimeTravel</b> ensures high fidelity, achieving unprecedented generalizable capability on in-the-wild cases such as occlusion, accessories and also satisfying industrial demand such as movie trailer, CGI.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<!-- How It Works -->
+<section class="hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">How It Works</h2>
+        <div class="column">
+          <img src="static/images/how_it_works.png"/>
+          <br><br>
+          <h2 class="subtitle has-text-centered">Conceptual behavior of delta operation</h2>
+        </div>
+        <br>
+        <div class="content has-text-justified">
+          Instead of generating entire pixels in an image, our system concentrates to generate the delta map and faciliate it for temporal consistency and high fidelity. In addition, by jointly optimizing null-text embedding on keyframes, global semantic consistency can be further enhanced. 
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Method overview -->
+<section class="hero is-light">
+  <div class="container" >
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="column">
+          <img src="static/images/fig_pipeline.png"/>
+          <br>
+          <h2 class="subtitle has-text-centered">Overview of our VideoTimeTravel</h2>
+        </div>
+        <br>
+        <div class="content has-text-justified">
+          We introduce delta propogation strategy, which allows us to boost 2D diffusion to video diffusion with no costly computating power.
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Production-Level Test -->
+<section class="hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered" >
+      <div class="column">
+        <br>
+        <div class="section-title">
+          <h2 class="title is-3 is-centered" id="additional">Production-Level Test</h2>
+          Additional videos will be revealed ASAP!
+        </div>
+        <br>
+        <div class="publication-video-small" style="width: 120%;  margin-left: -10%;">
+          <!-- Row 1 Begin-->
+          <div class="columns">
+            <!-- Video R1 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_01.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Sophie Marceau <br> Estimated Age: 45</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 21</div></div></div>
+              </div>
+            </div>
+            <!-- Video R1 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_02.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Jack Black, A Minecraft Movie (2025) <br> Estimated Age: 50</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 25</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 1 End-->
+
+          <!-- Row 2 Begin-->
+          <div class="columns">
+            <!-- Video R2 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_03.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Lee Jung-jae, Squid Game 1 (2021) <br> Estimated Age: 37</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 45</div></div></div>
+              </div>
+            </div>
+            <!-- Video R2 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_04.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Lee Jung-jae, Squid Game 3 (2025) <br> Estimated Age: 36</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 25</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 2 End-->
+
+          <!-- Row 3 Begin-->
+          <div class="columns">
+            <!-- Video R3 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_05.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Sophie Marceau <br> Estimated Age: 37</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 18</div></div></div>
+              </div>
+            </div>
+            <!-- Video R3 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_06.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Joey Wong, 倩女幽魂 (1987) <br> Estimated Age: 25</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 15</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 3 End-->
+
+          <!-- Row 4 Begin-->
+          <div class="columns">
+            <!-- Video R4 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_07.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Alita:Battle Angel (2019) <br> Estimated Age: 22</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 35</div></div></div>
+              </div>
+            </div>
+            <!-- Video R4 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_08.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Song Kang-ho, Memories of Murder (2003) <br> Estimated Age: 31</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 46</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 4 End-->
+
+          <!-- Row 5 Begin-->
+          <div class="columns">
+            <!-- Video R5 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_09.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Scarlett Johansson, The Avengers (2012) <br> Estimated Age: 22</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 15</div></div></div>
+              </div>
+            </div>
+            <!-- Video R5 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_10.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Sophie Marceau, La Boum (1980) <br> Estimated Age: 16</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 35</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 5 End-->
+
+          <!-- Row 6 Begin-->
+          <div class="columns">
+            <!-- Video R6 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_11.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Sharon Stone, Basic Instinct (1992) <br> Estimated Age: 27</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 35</div></div></div>
+              </div>
+            </div>
+            <!-- Video R6 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_12.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Harris Dickinson, The King's Man (2021) <br> Estimated Age: 33</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 45</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 6 End-->
+
+          <!-- Row 7 Begin-->
+          <div class="columns">
+            <!-- Video R7 C1 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_13.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Tom Hardy, Legend (2015) <br> Estimated Age: 41 </div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Young Direction <br> Target Age : 25</div></div></div>
+              </div>
+            </div>
+            <!-- Video R7 C2 -->
+            <div class="column is-half">
+              <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/sample_14.mp4" type="video/mp4"></video>
+              <!-- Description -->
+              <div class="columns vertical_center">
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Source: Robert De Niro, Taxi Driver (1976) <br> Estimated Age: 31</div></div></div>
+                <div class="column is-one-fifths"><div class="columns"><div class="column">
+                  Result: Old Direction <br> Target Age : 45</div></div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Row 7 End-->
+             
+          <h2 class="subtitle has-text-centered"><b>Our system showcases quite reasonable results on production-level videos </b></h2>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Qualitative Comparison: General Video Editing -->
+<section class="hero is-light">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <br>
+        <div class="section-title">
+          <h2 class="title is-3 is-centered" id="additional">Qualitative Comparison</h2>
+          Prompt-based General Video Editing Methods
+        </div>
+        <br>
+        <div class="publication-video-small">
+          <div style="display: flex; align-items: center; margin-left: -8%; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>48&rarr;30
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_general_video_editing_00.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>30&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_general_video_editing_01.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>53&rarr;30
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_general_video_editing_02.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>42&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_general_video_editing_03.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>51&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_general_video_editing_04.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>33&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+              <source src="static/images/compare_general_video_editing_05.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="columns vertical_center" style="margin-left: -4%; margin-right: -4%;"> 
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>RAVE<br>CVPR 2024</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>VidToMe<br>CVPR 2024</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>BIVDiff<br>CVPR 2024</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>TokenFlow<br>ICLR 2024</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Rerender-A-Video<br>Siggraph Asia 2023</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Fate/Zero<br>ICCV 2023</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Text2Video-Zero<br>ICCV 2023</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Pix2Video<br>ICCV 2023</p>
+            </div></div></div>
+          </div>
+          <h2 class="subtitle has-text-centered"><b>Our method outperforms existing video editing models in terms of re-aging performance, fidelity and temporal consistency</b></h2>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+    
+
+<!-- Qualitative Comparison: Video Face Editing -->
+<section class="hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column ">
+        <br>
+        <div class="section-title">
+          <h2 class="title is-3 is-centered" id="additional">Qualitative Comparison</h2>
+          Attribute-based Video Face Editing Methods
+        </div>
+        <br>
+        <div class="publication-video-small">
+
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>45&rarr;30
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_video_face_editing_00.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>32&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_video_face_editing_01.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>44&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_video_face_editing_02.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>43&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_video_face_editing_03.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div style="display: flex; align-items: center; margin-left: -8%;">
+            <div style="transform: rotate(-90deg);">
+                Age<br>40&rarr;60
+            </div>
+            <video id="sampler" autoplay controls loop muted width="100%">
+                <source src="static/images/compare_video_face_editing_04.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+          <div class="columns vertical_center" style="margin-left: -4%; margin-right: -4%;">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT<br>Siggraph Asia 2022</p>
+            </div></div></div>
+            
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>StyleGANEX<br>ICCV 2023</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>DiffusionVAE<br>CVPR 2023</p>
+            </div></div></div>
+
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>VIVE3D<br>CVPR 2023</p>
+            </div></div></div>
+          </div>
+          <h2 class="subtitle has-text-centered"><b>Our method is not constrained to any particular distribution such as FFHQ, in contrast to video face editing methods.</b></h2>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
