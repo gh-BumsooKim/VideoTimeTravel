@@ -1,4 +1,4 @@
-# VideoTimeTravle [The Visual Computer 2026]
+# VideoTimeTravle [The Visual Computer 2025]
  
 ### [Project Page](https://gh-bumsookim.github.io/VideoTimeTravel/) | \[Paper\] (Soon)
 This is official repository of 'VideoTimeTravel : High-Fidelity Face Re-Aging Diffusion Models For Production Video', accepted at The Visual Computer 2025.
